@@ -28,18 +28,18 @@ main > .section.brand-split-container > div {
 }
 
 .brand-split .brand-split-link {
-  display: flex;
-  flex-direction: column;
+  display: block;
   text-decoration: none;
   color: inherit;
   overflow: hidden;
-  height: 100%;
+  position: relative;
+  aspect-ratio: 1 / 1;
 }
 
 .brand-split .brand-split-image {
-  position: relative;
+  position: absolute;
+  inset: 0;
   overflow: hidden;
-  flex: 1 1 auto;
 }
 
 .brand-split .brand-split-image picture {
@@ -60,11 +60,16 @@ main > .section.brand-split-container > div {
   transform: scale(1.05);
 }
 
+/* Text: absolute overlay at bottom of image */
 .brand-split .brand-split-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background-color: rgba(195, 0, 45, 0.85);
   color: #fff;
-  padding: 40px 32px;
-  flex: 0 0 auto;
+  padding: 28px 32px 24px;
+  z-index: 1;
 }
 
 .brand-split .brand-split-text h2 {
@@ -92,7 +97,7 @@ main > .section.brand-split-container > div {
 
 @media (min-width: 900px) {
   .brand-split .brand-split-text {
-    padding: 50px 40px;
+    padding: 36px 40px 32px;
   }
 
   .brand-split .brand-split-text h2 {
@@ -100,7 +105,7 @@ main > .section.brand-split-container > div {
   }
 
   .brand-split .brand-split-text p {
-    font-size: 20px;
+    font-size: 17px;
     line-height: 1.46;
   }
 }
