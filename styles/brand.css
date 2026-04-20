@@ -1,0 +1,13 @@
+:root {
+  --heading-font-family: "ROSSMANN Sans", Arial, sans-serif;
+  --body-font-family: "ROSSMANN Sans", Arial, sans-serif;
+  --background-color: #ffffff;
+  --text-color: rgb(0, 0, 0);
+  --link-color: rgb(195, 0, 45);
+  --link-hover-color: rgb(150, 0, 35);
+  --brand-red: rgb(195, 0, 45);
+  --section-padding: 0px;
+  --nav-height: 80px;
+}
+
+html, body { overflow: auto !important; }
