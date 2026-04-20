@@ -1,0 +1,5 @@
+mountpoints:
+/:
+url: https://content.da.live/lisakreilingeradobe/rossmannunternehmen/
+type: markup
+
