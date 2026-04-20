@@ -16,15 +16,18 @@ export default function decorate(block) {
         const wrapper = document.createElement('a');
         wrapper.href = link.href;
         wrapper.classList.add('brand-split-link');
+        // img comes first (behind text via absolute positioning)
         wrapper.append(...row.children);
         row.textContent = '';
         row.append(wrapper);
 
-        // Remove the original standalone link/paragraph
-        const linkP = wrapper.querySelector('.brand-split-text p > a');
+        // Remove the original standalone link/paragraph (the "mehr erfahren" link)
+        const linkP = wrapper.querySelector('.brand-split-text p:last-child');
         if (linkP) {
-          const p = linkP.closest('p');
-          if (p) p.remove();
+          const pLink = linkP.querySelector('a');
+          if (pLink && pLink.parentElement === linkP && linkP.children.length === 1) {
+            linkP.remove();
+          }
         }
       }
     }
