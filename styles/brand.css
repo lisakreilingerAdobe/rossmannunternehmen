@@ -11,3 +11,8 @@
 }
 
 html, body { overflow: auto !important; }
+
+/* H1 heading color */
+main .default-content-wrapper h1 {
+  color: var(--brand-red);
+}
